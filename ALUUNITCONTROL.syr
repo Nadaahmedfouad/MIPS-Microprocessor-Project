@@ -1,0 +1,459 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: ALUUNITCONTROL.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ALUUNITCONTROL.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ALUUNITCONTROL"
+Output Format                      : NGC
+Target Device                      : xc7k325t-2-ffg900
+
+---- Source Options
+Top Module Name                    : ALUUNITCONTROL
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Nada\Desktop\NADAABOSAADA 211002838\ALUUNITCONTROL.vhd" into library work
+Parsing entity <ALUUNITCONTROL>.
+Parsing architecture <Behavioral> of entity <aluunitcontrol>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <ALUUNITCONTROL> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <ALUUNITCONTROL>.
+    Related source file is "C:\Users\Nada\Desktop\NADAABOSAADA 211002838\ALUUNITCONTROL.vhd".
+WARNING:Xst:647 - Input <ALU_FUNC<5:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALU_OUTPUT<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALU_OUTPUT<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALU_OUTPUT<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALU_OUTPUT<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   4 Latch(s).
+	inferred  12 Multiplexer(s).
+Unit <ALUUNITCONTROL> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Latches                                              : 4
+ 1-bit latch                                           : 4
+# Multiplexers                                         : 12
+ 1-bit 2-to-1 multiplexer                              : 12
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multiplexers                                         : 12
+ 1-bit 2-to-1 multiplexer                              : 12
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <ALU_OUTPUT_3> (without init value) has a constant value of 0 in block <ALUUNITCONTROL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:3001 - This design contains one or more registers or latches with an active
+   asynchronous set and asynchronous reset. While this circuit can be built,
+   it creates a sub-optimal implementation in terms of area, power and
+   performance. For a more optimal implementation Xilinx highly recommends
+   one of the following:
+
+          1) Remove either the set or reset from all registers and latches if
+             not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Kintex7 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    ALU_OUTPUT_2 in unit <ALUUNITCONTROL>
+
+
+Optimizing unit <ALUUNITCONTROL> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ALUUNITCONTROL, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : ALUUNITCONTROL.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 12
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 3
+#      LUT3                        : 1
+#      LUT4                        : 1
+#      LUT6                        : 5
+# FlipFlops/Latches                : 3
+#      LD                          : 1
+#      LDC                         : 1
+#      LDP                         : 1
+# IO Buffers                       : 10
+#      IBUF                        : 6
+#      OBUF                        : 4
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7k325tffg900-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               3  out of  407600     0%  
+ Number of Slice LUTs:                   11  out of  203800     0%  
+    Number used as Logic:                11  out of  203800     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     11
+   Number with an unused Flip Flop:       8  out of     11    72%  
+   Number with an unused LUT:             0  out of     11     0%  
+   Number of fully used LUT-FF pairs:     3  out of     11    27%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                          12
+ Number of bonded IOBs:                  10  out of    500     2%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------+------------------------+-------+
+Clock Signal                                               | Clock buffer(FF name)  | Load  |
+-----------------------------------------------------------+------------------------+-------+
+PWR_3_o_GND_3_o_MUX_15_o(Mmux_PWR_3_o_GND_3_o_MUX_15_o11:O)| NONE(*)(ALU_OUTPUT_1)  | 2     |
+ALU_OUTPUT_2_G(ALU_OUTPUT_2_G:O)                           | NONE(*)(ALU_OUTPUT_2)  | 1     |
+-----------------------------------------------------------+------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 0.728ns (Maximum Frequency: 1373.155MHz)
+   Minimum input arrival time before clock: 1.212ns
+   Maximum output required time after clock: 0.674ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PWR_3_o_GND_3_o_MUX_15_o'
+  Clock period: 0.728ns (frequency: 1373.155MHz)
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               0.728ns (Levels of Logic = 1)
+  Source:            ALU_OUTPUT_1 (LATCH)
+  Destination:       ALU_OUTPUT_1 (LATCH)
+  Source Clock:      PWR_3_o_GND_3_o_MUX_15_o falling
+  Destination Clock: PWR_3_o_GND_3_o_MUX_15_o falling
+
+  Data Path: ALU_OUTPUT_1 to ALU_OUTPUT_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDP:G->Q              2   0.330   0.355  ALU_OUTPUT_1 (ALU_OUTPUT_1)
+     LUT6:I5->O            1   0.043   0.000  Mmux_ALU_OUTPUT[3]_ALU_OUTPUT[3]_MUX_31_o1 (ALU_OUTPUT[3]_ALU_OUTPUT[3]_MUX_31_o)
+     LDP:D                    -0.034          ALU_OUTPUT_1
+    ----------------------------------------
+    Total                      0.728ns (0.373ns logic, 0.355ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ALU_OUTPUT_2_G'
+  Clock period: 0.728ns (frequency: 1373.155MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               0.728ns (Levels of Logic = 1)
+  Source:            ALU_OUTPUT_2 (LATCH)
+  Destination:       ALU_OUTPUT_2 (LATCH)
+  Source Clock:      ALU_OUTPUT_2_G falling
+  Destination Clock: ALU_OUTPUT_2_G falling
+
+  Data Path: ALU_OUTPUT_2 to ALU_OUTPUT_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.330   0.355  ALU_OUTPUT_2 (ALU_OUTPUT_2)
+     LUT6:I5->O            1   0.043   0.000  ALU_OUTPUT_2_D (ALU_OUTPUT_2_D)
+     LD:D                     -0.034          ALU_OUTPUT_2
+    ----------------------------------------
+    Total                      0.728ns (0.373ns logic, 0.355ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PWR_3_o_GND_3_o_MUX_15_o'
+  Total number of paths / destination ports: 14 / 4
+-------------------------------------------------------------------------
+Offset:              1.139ns (Levels of Logic = 3)
+  Source:            ALU_OOP<0> (PAD)
+  Destination:       ALU_OUTPUT_1 (LATCH)
+  Destination Clock: PWR_3_o_GND_3_o_MUX_15_o falling
+
+  Data Path: ALU_OOP<0> to ALU_OUTPUT_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   0.000   0.428  ALU_OOP_0_IBUF (ALU_OOP_0_IBUF)
+     LUT2:I0->O            3   0.043   0.625  Mmux_ALU_OUTPUT[3]_ALU_OUTPUT[3]_MUX_31_o1_SW0 (N2)
+     LUT6:I0->O            1   0.043   0.000  Mmux_ALU_OUTPUT[3]_ALU_OUTPUT[3]_MUX_31_o1 (ALU_OUTPUT[3]_ALU_OUTPUT[3]_MUX_31_o)
+     LDP:D                    -0.034          ALU_OUTPUT_1
+    ----------------------------------------
+    Total                      1.139ns (0.086ns logic, 1.053ns route)
+                                       (7.5% logic, 92.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ALU_OUTPUT_2_G'
+  Total number of paths / destination ports: 13 / 1
+-------------------------------------------------------------------------
+Offset:              1.212ns (Levels of Logic = 3)
+  Source:            ALU_FUNC<2> (PAD)
+  Destination:       ALU_OUTPUT_2 (LATCH)
+  Destination Clock: ALU_OUTPUT_2_G falling
+
+  Data Path: ALU_FUNC<2> to ALU_OUTPUT_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   0.000   0.523  ALU_FUNC_2_IBUF (ALU_FUNC_2_IBUF)
+     LUT3:I0->O            1   0.043   0.603  Mmux_ALU_OUTPUT[3]_ALU_OUTPUT[3]_MUX_20_o1_SW0 (N8)
+     LUT6:I1->O            1   0.043   0.000  ALU_OUTPUT_2_D (ALU_OUTPUT_2_D)
+     LD:D                     -0.034          ALU_OUTPUT_2
+    ----------------------------------------
+    Total                      1.212ns (0.086ns logic, 1.126ns route)
+                                       (7.1% logic, 92.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ALU_OUTPUT_2_G'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.674ns (Levels of Logic = 1)
+  Source:            ALU_OUTPUT_2 (LATCH)
+  Destination:       ALU_OUTPUT<2> (PAD)
+  Source Clock:      ALU_OUTPUT_2_G falling
+
+  Data Path: ALU_OUTPUT_2 to ALU_OUTPUT<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.330   0.344  ALU_OUTPUT_2 (ALU_OUTPUT_2)
+     OBUF:I->O                 0.000          ALU_OUTPUT_2_OBUF (ALU_OUTPUT<2>)
+    ----------------------------------------
+    Total                      0.674ns (0.330ns logic, 0.344ns route)
+                                       (48.9% logic, 51.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PWR_3_o_GND_3_o_MUX_15_o'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.674ns (Levels of Logic = 1)
+  Source:            ALU_OUTPUT_1 (LATCH)
+  Destination:       ALU_OUTPUT<1> (PAD)
+  Source Clock:      PWR_3_o_GND_3_o_MUX_15_o falling
+
+  Data Path: ALU_OUTPUT_1 to ALU_OUTPUT<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDP:G->Q              2   0.330   0.344  ALU_OUTPUT_1 (ALU_OUTPUT_1)
+     OBUF:I->O                 0.000          ALU_OUTPUT_1_OBUF (ALU_OUTPUT<1>)
+    ----------------------------------------
+    Total                      0.674ns (0.330ns logic, 0.344ns route)
+                                       (48.9% logic, 51.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock ALU_OUTPUT_2_G
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+ALU_OUTPUT_2_G |         |         |    0.728|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PWR_3_o_GND_3_o_MUX_15_o
+------------------------+---------+---------+---------+---------+
+                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------+---------+---------+---------+---------+
+PWR_3_o_GND_3_o_MUX_15_o|         |         |    0.728|         |
+------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.38 secs
+ 
+--> 
+
+Total memory usage is 4586496 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "D:/Student/Desktop/mips211002838nadafouadfinal/ALUUNITCONTROL.xst" -ofn "D:/Student/Desktop/mips211002838nadafouadfinal/ALUUNITCONTROL.syr" 
+xst -intstyle ise -ifn "D:/Student/Desktop/NADAABOSAADA 211002838/ALUUNITCONTROL.xst" -ofn "D:/Student/Desktop/NADAABOSAADA 211002838/ALUUNITCONTROL.syr" 
+xst -intstyle ise -ifn "C:/Users/Nada/Desktop/NADAABOSAADA 211002838/ALUUNITCONTROL.xst" -ofn "C:/Users/Nada/Desktop/NADAABOSAADA 211002838/ALUUNITCONTROL.syr" 

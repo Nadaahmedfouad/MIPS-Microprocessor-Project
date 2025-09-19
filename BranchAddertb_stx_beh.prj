@@ -1,0 +1,2 @@
+vhdl isim_temp "BranchAdder.vhd"
+vhdl isim_temp "BranchAddertb.vhd"

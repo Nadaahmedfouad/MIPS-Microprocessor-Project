@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "D:/Student/Desktop/Kenzy/mips211002838nadafouadfinal/ALU.xst" -ofn "D:/Student/Desktop/Kenzy/mips211002838nadafouadfinal/ALU.syr" 
+xst -intstyle ise -ifn "D:/Student/Desktop/Kenzy/mips211002838nadafouadfinal/ALU.xst" -ofn "D:/Student/Desktop/Kenzy/mips211002838nadafouadfinal/ALU.syr" 
+xst -intstyle ise -ifn "D:/Student/Desktop/mips211002838nadafouadfinal/ALU.xst" -ofn "D:/Student/Desktop/mips211002838nadafouadfinal/ALU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7k325t-ffg900-2 ALU.ngc ALU.ngd  
+map -intstyle ise -p xc7k325t-ffg900-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o ALU_map.ncd ALU.ngd ALU.pcf 

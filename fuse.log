@@ -1,0 +1,46 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Nada/Desktop/NADAABOSAADA 211002838/MIPS_testbench_isim_beh.exe" -prj "C:/Users/Nada/Desktop/NADAABOSAADA 211002838/MIPS_testbench_beh.prj" "work.MIPS_testbench" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 1
+Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Nada/Desktop/NADAABOSAADA 211002838/SignExtend.vhd" into library work
+Parsing VHDL file "C:/Users/Nada/Desktop/NADAABOSAADA 211002838/ShiftLeft2.vhd" into library work
+Parsing VHDL file "C:/Users/Nada/Desktop/NADAABOSAADA 211002838/Reg_file.vhd" into library work
+Parsing VHDL file "C:/Users/Nada/Desktop/NADAABOSAADA 211002838/Pc.vhd" into library work
+Parsing VHDL file "C:/Users/Nada/Desktop/NADAABOSAADA 211002838/Mux_5.vhd" into library work
+Parsing VHDL file "C:/Users/Nada/Desktop/NADAABOSAADA 211002838/Mux.vhd" into library work
+Parsing VHDL file "C:/Users/Nada/Desktop/NADAABOSAADA 211002838/InstructionMemory.vhd" into library work
+Parsing VHDL file "C:/Users/Nada/Desktop/NADAABOSAADA 211002838/DataMemory.vhd" into library work
+Parsing VHDL file "C:/Users/Nada/Desktop/NADAABOSAADA 211002838/ControlUnit.vhd" into library work
+Parsing VHDL file "C:/Users/Nada/Desktop/NADAABOSAADA 211002838/ALUUNITCONTROL.vhd" into library work
+Parsing VHDL file "C:/Users/Nada/Desktop/NADAABOSAADA 211002838/ALU.vhd" into library work
+Parsing VHDL file "C:/Users/Nada/Desktop/NADAABOSAADA 211002838/Adder.vhd" into library work
+Parsing VHDL file "C:/Users/Nada/Desktop/NADAABOSAADA 211002838/MIPS.vhd" into library work
+Parsing VHDL file "C:/Users/Nada/Desktop/NADAABOSAADA 211002838/MIPS_testbench.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling architecture behavioral of entity Pc [pc_default]
+Compiling architecture behavioral of entity Adder [adder_default]
+Compiling architecture behavioral of entity InstructionMemory [instructionmemory_default]
+Compiling architecture behavioral of entity ControlUnit [controlunit_default]
+Compiling architecture behavioral of entity Mux_5 [mux_5_default]
+Compiling architecture behavioral of entity Mux_32 [mux_32_default]
+Compiling architecture behavioral of entity RegisterFile [registerfile_default]
+Compiling architecture behavioral of entity SignExtend [signextend_default]
+Compiling architecture behavioral of entity ShiftLeft2 [shiftleft2_default]
+Compiling architecture behavioral of entity ALUUNITCONTROL [aluunitcontrol_default]
+Compiling architecture behavioral of entity ALU [alu_default]
+Compiling architecture behavioral of entity DataMemory [datamemory_default]
+Compiling architecture behavioral of entity MIPS [mips_default]
+Compiling architecture behavior of entity mips_testbench
+Time Resolution for simulation is 1ps.
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\MIPS_testbench_isim_beh.exe.sim\libPortability.dll".
+Compiled 32 VHDL Units
+Built simulation executable C:/Users/Nada/Desktop/NADAABOSAADA 211002838/MIPS_testbench_isim_beh.exe
+Fuse Memory Usage: 38076 KB
+Fuse CPU Usage: 530 ms

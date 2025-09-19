@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Nada/Desktop/NADAABOSAADA 211002838/MIPS_testbench_isim_beh.exe" -prj "C:/Users/Nada/Desktop/NADAABOSAADA 211002838/MIPS_testbench_beh.prj" "work.MIPS_testbench" 
